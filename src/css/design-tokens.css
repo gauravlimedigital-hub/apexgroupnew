@@ -1,0 +1,47 @@
+:root {
+  /* Color System */
+  --color-primary-dark: #111f43;    /* Deep Navy Blue */
+  --color-primary-light: #FAFAFA;   /* Clean Page Background */
+  --color-accent-gold: #d7c2a3;     /* Luxury Gold */
+  --color-secondary-blue: #354773;  /* Secondary Navy Blue */
+  --color-neutral-beige: #FAFAFA;   /* Neutral Background */
+  --color-neutral-stone: #555555;   /* Neutral Dark Gray for Body */
+  --color-white: #FFFFFF;
+  --border-color: rgba(17, 31, 67, 0.1);
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-body: 'Poppins', 'Inter', sans-serif;
+  
+  /* Desktop Typography Scale */
+  --text-h1: 72px;
+  --text-h2: 60px;
+  --text-h3: 32px;
+  --text-body-large: 18px;
+  --text-body: 16px;
+  --text-caption: 14px;
+  
+  /* Spacing */
+  --spacing-section: 60px;
+  --spacing-element: 28px;
+  
+  /* UI Elements */
+  --border-radius-soft: 4px;
+  --border-radius-card: 20px;
+  --shadow-premium: 0 10px 40px rgba(17, 31, 67, 0.05);
+  
+  /* Transitions */
+  --transition-slow: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-medium: 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-h1: 48px;
+    --text-h2: 36px;
+    --text-h3: 24px;
+    --text-body-large: 16px;
+    --text-body: 14px;
+    --spacing-section: 40px;
+  }
+}

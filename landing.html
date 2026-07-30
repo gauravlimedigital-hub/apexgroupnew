@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELYRIA by Apex Group | Biophilic Luxury Living</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Vite Entry Point -->
+    <script type="module" src="/src/main.jsx"></script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <div class="header-left">
+                <a href="#" class="logo-link">
+                    <img src="logo.png" alt="Apex Group" class="logo-img" loading="lazy">
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#amenities" class="nav-link">Amenities</a>
+                <a href="#floor-plans" class="nav-link">Floor Plans</a>
+                <a href="#location" class="nav-link">Location Advantage</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+            </nav>
+            <div class="header-right">
+                <a href="tel:18002003676" class="btn-primary header-cta desktop-only">1800 200 3676</a>
+                <div class="hamburger" id="hamburger-menu" aria-label="Open Mobile Menu">⋮</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dark Overlay Backdrop -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- Mobile Right-Side Off-Canvas Sliding Drawer -->
+    <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+        <!-- Dedicated Drawer Header Section (Fixed Height ~85px) -->
+        <div class="drawer-header">
+            <a href="/" class="drawer-logo-link">
+                <img src="logo.png" alt="Apex Logo" class="drawer-logo-img">
+            </a>
+            <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+        </div>
+
+        <!-- Search Bar Section Immediately Below Header -->
+        <div class="drawer-search-container">
+            <div class="drawer-search-wrapper">
+                <input type="text" placeholder="Search Articles..." class="drawer-search-input">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+        </div>
+
+        <!-- Vertical Navigation Links -->
+        <nav class="drawer-nav">
+            <!-- About Accordion -->
+            <div class="drawer-nav-group">
+                <button class="drawer-nav-item accordion-trigger">
+                    <span>About</span>
+                    <span class="chevron-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <a href="#about" class="drawer-sublink">About Elyria</a>
+                    <a href="https://theapexgroup.in/why-us.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Why Us</a>
+                    <a href="https://theapexgroup.in/qualityPolicy.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Quality Policy</a>
+                    <a href="https://theapexgroup.in/cmdMessage.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">CMD Message</a>
+                    <a href="https://theapexgroup.in/ourTeam.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Our Team</a>
+                </div>
+            </div>
+
+            <!-- Projects Accordion -->
+            <div class="drawer-nav-group">
+                <button class="drawer-nav-item accordion-trigger">
+                    <span>Projects</span>
+                    <span class="chevron-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <a href="https://www.theapexgroup.in/qubec.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Apex Quebec</a>
+                    <a href="https://www.theapexgroup.in/drio.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Apex D’Rio</a>
+                    <a href="https://www.theapexgroup.in/apexKremlin.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Apex The Kremlin</a>
+                    <a href="https://www.theapexgroup.in/apex-alphabet.php" target="_blank" rel="noopener noreferrer" class="drawer-sublink">Apex Alphabet</a>
+                </div>
+            </div>
+
+            <div class="drawer-nav-group">
+                <a href="#testimonials" class="drawer-nav-item">Testimonials</a>
+            </div>
+
+            <div class="drawer-nav-group">
+                <a href="/blog" class="drawer-nav-item">Blog</a>
+            </div>
+
+            <div class="drawer-nav-group">
+                <a href="https://theapexgroup.in/contact-us.php" target="_blank" rel="noopener noreferrer" class="drawer-nav-item">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Sticky Bottom CTA Section -->
+        <div class="drawer-footer-cta">
+            <button class="btn-primary drawer-btn-cta private-viewing-trigger">Book Site Visit</button>
+            <a href="tel:18002003676" class="btn-outline drawer-btn-phone">1800 200 3676</a>
+        </div>
+    </aside>
+
+    <!-- Sticky Right Side CTA Tab -->
+    <div class="sticky-right-cta desktop-only">
+        <button class="sticky-tab-btn private-viewing-trigger">
+            <span>BOOK SITE VISIT</span>
+        </button>
+    </div>
+
+        <!-- 1. Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-media-wrapper">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-bottom-gradient"></div>
+        </div>
+        <!-- CSS Fog Layers -->
+        <div class="fog-layer fog-1"></div>
+        <div class="fog-layer fog-2"></div>
+        <div class="container hero-grid">
+            <div class="hero-content reveal-up">
+                <span class="caption premium-label">PREMIUM BIOPHILIC RESIDENCES</span>
+                <h1>Experience<br>Biophilic Living</h1>
+                <div class="hero-divider"></div>
+                <div class="hero-location">in Siddharth Vihar</div>
+                <p class="subheading">Premium 3 / 3.5 / 4.5 BHK Residences<br>Inspired by Nature.<br>Starting from ₹2.5 Cr.</p>
+                
+                <div class="usp-row">
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C12 2 4 6 4 13C4 17.4183 7.58172 21 12 21C16.4183 21 20 17.4183 20 13C20 6 12 2 12 2Z"></path><path d="M12 21V11"></path></svg>
+                        </div>
+                        <div class="usp-content">
+                            <span class="usp-number">80%</span>
+                            <span class="usp-text">OPEN GREENS</span>
+                        </div>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21L21 21"></path><path d="M5 21V7L13 3V21"></path><path d="M19 21V11L13 7"></path></svg>
+                        </div>
+                        <div class="usp-content">
+                            <span class="usp-number">35,000</span>
+                            <span class="usp-text">SQ.FT CLUBHOUSE</span>
+                        </div>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M2 12H22"></path><path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z"></path></svg>
+                        </div>
+                        <div class="usp-content">
+                            <span class="usp-number">43</span>
+                            <span class="usp-text">ACRES GREEN VIEW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-form-wrapper reveal-up delay-1">
+                <div class="glass-form">
+                    <h3>Download Brochure</h3>
+                    <div class="ornate-divider">
+                        <span></span>
+                        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" stroke="var(--color-accent-gold)" stroke-width="1"><path d="M12 2L15 8H9L12 2Z"/><circle cx="12" cy="5" r="1" fill="var(--color-accent-gold)"/></svg>
+                        <span></span>
+                    </div>
+                    
+                    <div id="form-success-msg" class="success-message" style="display: none;">
+                        <h4>Thank you.</h4>
+                        <p>Your brochure is downloading.</p>
+                        <p>Our relationship manager will contact you shortly.</p>
+                    </div>
+                    
+                    <form class="enquiry-form" id="enquiry-form" novalidate>
+                        <div class="form-group has-icon">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group has-icon">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group has-icon">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group has-icon">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            <select name="bhk" required>
+                                <option value="" disabled selected>Select Apartment Type</option>
+                                <option value="3BHK">3 BHK</option>
+                                <option value="3.5BHK">3.5 BHK</option>
+                                <option value="4.5BHK">4.5 BHK</option>
+                            </select>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="btn-primary full-width btn-with-icon">
+                            <span class="btn-text">DOWNLOAD BROCHURE</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <span class="loading-spinner" style="display: none;"></span>
+                        </button>
+
+                        <div class="privacy-note">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            Your information is safe with us
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. The Five Elements Section -->
+    <section id="philosophy" class="bg-light philosophy-section elements-section">
+        <div class="container text-center">
+            <div class="elements-header reveal-up">
+                <span class="caption premium-label">The Five Elements</span>
+                <h2>Where Elements Shape Existence</h2>
+            </div>
+            
+            <div class="elements-icons reveal-up delay-1">
+                <div class="element-item">
+                    <img src="assets/images/logo/1.png" alt="Air Logo" class="element-logo">
+                </div>
+                <div class="element-item">
+                    <img src="assets/images/logo/2.png" alt="Water Logo" class="element-logo">
+                </div>
+                <div class="element-item">
+                    <img src="assets/images/logo/3.png" alt="Earth Logo" class="element-logo">
+                </div>
+                <div class="element-item">
+                    <img src="assets/images/logo/4.png" alt="Fire Logo" class="element-logo">
+                </div>
+                <div class="element-item">
+                    <img src="assets/images/logo/5.png" alt="Ether Logo" class="element-logo">
+                </div>
+            </div>
+            
+            <div class="elements-body reveal-up delay-2">
+                <p>Grounded by Earth, nourished by Water, energized by Fire, embraced by Air, and elevated by the boundless presence of Ether, Elyria brings together nature's five sacred elements in perfect harmony. A sanctuary where every breath restores, every space inspires, and every moment feels profoundly connected.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About the Project -->
+    <section id="about" class="bg-dark">
+        <div class="container editorial-grid reveal-up">
+            <div class="editorial-media">
+                <img src="assets/images/living architechture.png" alt="Living Architecture" class="aspect-4-5">
+            </div>
+            <div class="editorial-text">
+                <span class="caption">About the Project</span>
+                <h2>Living Architecture</h2>
+                <p>A facade draped in cascading greenery acts as a natural air purifier and thermal regulator. Every space is curated to dissolve the boundaries between the indoors and the lush forests outside.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 5. Amenities -->
+    <section id="amenities" class="bg-light">
+        <div class="container">
+            <div class="reveal-up" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-bottom: 64px;">
+                <span class="caption" style="color: var(--color-accent-gold); display: block; margin-bottom: 8px; text-align: center;">The Amenities</span>
+                <h2 style="text-align: center;">Holistic Wellness</h2>
+            </div>
+            <div class="new-amenities-wrapper">
+                <div class="premium-amenity-card reveal-up">
+                    <img src="assets/images/1.png" alt="Elysian Club" class="amenity-hero-img">
+                    <div class="amenity-overlay">
+                        <h4>Elysian Club</h4>
+                        <p>Premium social and wellness experience</p>
+                    </div>
+                </div>
+                <div class="premium-amenity-card reveal-up" style="transition-delay: 80ms;">
+                    <img src="assets/images/2.png" alt="Biophilic Gym" class="amenity-hero-img">
+                    <div class="amenity-overlay">
+                        <h4>Biophilic Gym</h4>
+                        <p>State-of-the-art fitness center</p>
+                    </div>
+                </div>
+                <div class="premium-amenity-card reveal-up" style="transition-delay: 160ms;">
+                    <img src="assets/images/3.png" alt="Banquet Hall" class="amenity-hero-img">
+                    <div class="amenity-overlay">
+                        <h4>Banquet Hall</h4>
+                        <p>Grand spaces for celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Floor Plans -->
+    <section id="floor-plans" class="bg-dark">
+        <div class="container">
+            <div class="reveal-up" style="width: 100%; text-align: center !important; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <span class="caption" style="display: block; margin-bottom: 8px; text-align: center;">The Residences</span>
+                <h2 style="white-space: nowrap; font-size: 42px; margin-bottom: 0; text-align: center;">Spaces Designed for Living</h2>
+            </div>
+            <div class="plans-grid">
+                <div class="floor-plan-card reveal-up" onclick="openFloorPlanModal('assets/images/fp unit 1.png', 'Unit 1')">
+                    <div class="fp-img-wrapper">
+                        <img src="assets/images/fp unit 1.png" alt="Unit 1">
+                        <button class="fp-view-btn">View Floor Plan</button>
+                    </div>
+                    <div class="fp-footer">
+                        Unit 1
+                    </div>
+                </div>
+                <div class="floor-plan-card reveal-up" style="transition-delay: 80ms;" onclick="openFloorPlanModal('assets/images/fp unit 2.png', 'Unit 2')">
+                    <div class="fp-img-wrapper">
+                        <img src="assets/images/fp unit 2.png" alt="Unit 2">
+                        <button class="fp-view-btn">View Floor Plan</button>
+                    </div>
+                    <div class="fp-footer">
+                        Unit 2
+                    </div>
+                </div>
+                <div class="floor-plan-card reveal-up" style="transition-delay: 160ms;" onclick="openFloorPlanModal('assets/images/fp unit 3.png', 'Unit 3')">
+                    <div class="fp-img-wrapper">
+                        <img src="assets/images/fp unit 3.png" alt="Unit 3">
+                        <button class="fp-view-btn">View Floor Plan</button>
+                    </div>
+                    <div class="fp-footer">
+                        Unit 3
+                    </div>
+                </div>
+                <div class="floor-plan-card reveal-up" style="transition-delay: 240ms;" onclick="openFloorPlanModal('assets/images/fp unit 4.png', 'Unit 4')">
+                    <div class="fp-img-wrapper">
+                        <img src="assets/images/fp unit 4.png" alt="Unit 4">
+                        <button class="fp-view-btn">View Floor Plan</button>
+                    </div>
+                    <div class="fp-footer">
+                        Unit 4
+                    </div>
+                </div>
+                <div class="floor-plan-card reveal-up" style="transition-delay: 320ms;" onclick="openFloorPlanModal('assets/images/fp unit 5.png', 'Unit 5')">
+                    <div class="fp-img-wrapper">
+                        <img src="assets/images/fp unit 5.png" alt="Unit 5">
+                        <button class="fp-view-btn">View Floor Plan</button>
+                    </div>
+                    <div class="fp-footer">
+                        Unit 5
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Location Advantage -->
+    <section id="location" class="location-advantage-section">
+        <div class="location-container">
+            <div class="location-header reveal-up">
+                <span class="location-label">LOCATION ADVANTAGE</span>
+                <h2 class="location-title">Everything Within Reach</h2>
+                <p class="location-subtitle">Enjoy seamless connectivity to business hubs, education, healthcare and entertainment.</p>
+            </div>
+            
+            <div class="location-layout">
+                <!-- Left: Map -->
+                <div class="location-map-container reveal-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.996024925765!2d77.4116491763189!3d28.63186217566504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf02c34759719%3A0xc391b10631ba95e1!2sSiddharth%20Vihar%2C%20Ghaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1709210000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <!-- Right: Cards -->
+                <div class="location-cards-grid">
+                    <div class="location-card reveal-up" style="transition-delay: 0ms;">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="3" width="16" height="16" rx="2" ry="2"></rect>
+                            <path d="M4 11h16"></path>
+                            <path d="M12 3v8"></path>
+                            <path d="M8 19l-2 3"></path>
+                            <path d="M16 19l2 3"></path>
+                        </svg>
+                        <h4>Metro Station</h4>
+                        <p>5 mins to Siddharth Vihar Metro</p>
+                    </div>
+                    <div class="location-card reveal-up" style="transition-delay: 80ms;">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                        <h4>Education</h4>
+                        <p>Top schools within 2km radius</p>
+                    </div>
+                    <div class="location-card reveal-up" style="transition-delay: 160ms;">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <path d="M12 8v8"></path>
+                            <path d="M8 12h8"></path>
+                        </svg>
+                        <h4>Healthcare</h4>
+                        <p>Leading hospitals in proximity</p>
+                    </div>
+                    <div class="location-card reveal-up" style="transition-delay: 240ms;">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.7L3 8l6 4.5-4.5 4.5-2.8-.7c-.4-.1-.8.2-1 .6L0 18l4 1 1 4 .7-.7c.4-.2.7-.6.6-1l-.7-2.8L10 14l4.5 6l1.1-.7c.5-.2.8-.6.7-1.1z"></path>
+                        </svg>
+                        <h4>Airport</h4>
+                        <p>45 mins to Int'l Airport</p>
+                    </div>
+                    <div class="location-card reveal-up" style="transition-delay: 320ms;">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <path d="M9 22v-4h6v4"></path>
+                            <path d="M8 6h.01"></path>
+                            <path d="M16 6h.01"></path>
+                            <path d="M12 6h.01"></path>
+                            <path d="M12 10h.01"></path>
+                            <path d="M12 14h.01"></path>
+                            <path d="M16 10h.01"></path>
+                            <path d="M16 14h.01"></path>
+                            <path d="M8 10h.01"></path>
+                            <path d="M8 14h.01"></path>
+                        </svg>
+                        <h4>Business Hubs</h4>
+                        <p>Easy access to corporate parks</p>
+                    </div>
+                    <div class="location-card reveal-up" style="transition-delay: 400ms;">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                        <h4>Expressways</h4>
+                        <p>Adjacent to major expressways</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Legacy of Apex -->
+    <section id="legacy" class="bg-dark">
+        <div class="container usp-content reveal-up" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+            <span class="caption" style="display: block; margin-bottom: 8px; text-align: center;">The Developer</span>
+            <h2 style="text-align: center;">A Legacy of Trust</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">For over decades, Apex Group has redefined the skyline with a commitment to quality, timely delivery, and unparalleled architectural brilliance.</p>
+        </div>
+    </section>
+
+    <!-- 9. Gallery -->
+    <section id="gallery" class="bg-light">
+        <div class="container">
+            <h2 class="reveal-up" style="text-align: center;">Gallery</h2>
+            <div class="marquee-wrapper">
+                <div class="gallery-marquee" id="gallery-marquee">
+                    <!-- Images dynamically loaded via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <!-- 10. FAQ -->
+    <section id="faq" class="bg-dark faq-section">
+        <div class="container faq-container">
+            <div class="faq-intro reveal-up">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-divider"></div>
+            </div>
+            
+            <div class="faq-accordion reveal-up">
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>What is Biophilic Living?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Biophilic Living is a design philosophy that reconnects everyday life with nature. At Elyria, architecture, landscape, natural light, flowing water, and open green spaces come together to create healthier, calmer, and more inspiring homes that enhance overall well-being.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>Why is the project called Elyria?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Inspired by the serene landscapes of Elyria, Ohio, the project embodies harmony between nature and modern architecture. Every residence reflects the balance of greenery, water, light, and space to create an environment that feels timeless and peaceful.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>What makes Elyria different from other luxury residences?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Unlike conventional developments, Elyria is designed around the principles of biophilic architecture. Vertical gardens, open landscapes, wellness-focused amenities, abundant natural light, and seamless indoor-outdoor living create an ecosystem rather than just another residential project.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>What lifestyle amenities are offered?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Residents enjoy curated wellness amenities including landscaped gardens, clubhouse facilities, recreational spaces, fitness areas, children's play zones, social lounges, and beautifully designed open spaces that promote relaxation and community living.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>What is the design philosophy behind Elyria?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Every detail at Elyria is inspired by nature's five elements—earth, water, air, fire, and space. The architecture blends organic forms, sustainable planning, and modern luxury to create homes that feel peaceful, elegant, and deeply connected to the natural environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Final CTA -->
+    <section id="contact" class="final-cta bg-light">
+        <div class="container reveal-up" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+            <span class="caption" style="color: var(--color-accent-gold); display: block; margin-bottom: 8px; text-align: center;">Take the next step</span>
+            <h2 style="margin-bottom: 40px; text-align: center;">Begin Your Journey</h2>
+            <a href="#" class="btn-primary private-viewing-trigger">Book a Site Visit</a>
+        </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="bg-dark">
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <img src="assets/images/elyria-logo.png" alt="Elyria Logo" class="footer-logo">
+                <p class="footer-address">Siddharth Vihar, Ghaziabad</p>
+            </div>
+            <div class="footer-disclaimer">
+                <span class="disclaimer-label">DISCLAIMER</span>
+                <p class="disclaimer-text">
+                    Disclaimer: The content on this website is provided for general informational purposes only and does not constitute an offer, invitation, or commitment of any nature. All images, renders, illustrations, specifications, amenities, and visuals are artistic impressions and are intended solely for representational purposes. The actual product may vary. Prices, specifications, availability, and project details are subject to change without prior notice at the sole discretion of the developer. By submitting your contact details, you authorize us to communicate with you via phone call, SMS, WhatsApp, or email regarding project updates, offers, and other relevant information.<br><br>
+                    The images displayed on this website are artistic impressions and are not actual photographs of the project.
+                </p>
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; 2026. All rights reserved to Elyria.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Mobile Bottom Action Bar -->
+    <div class="mobile-action-bar">
+        <div class="action-grid">
+            <a href="#" class="action-btn">
+                <span>Call Now</span>
+            </a>
+            <a href="#" class="action-btn primary private-viewing-trigger">
+                <span>Book Visit</span>
+            </a>
+            <a href="#" class="action-btn">
+                <span>Chat</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts (Moved to end of body) -->
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox" id="gallery-lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <button class="lightbox-prev">&#10094;</button>
+            <img class="lightbox-img" src="" alt="Expanded View">
+            <button class="lightbox-next">&#10095;</button>
+        </div>
+    </div>
+    <!-- Common Enquiry Modal -->
+    <div class="modal" id="private-viewing-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content glass-form">
+            <span class="modal-close">&times;</span>
+            <h3>Book Site Visit</h3>
+            <div class="form-divider"></div>
+            <div class="success-message" style="display: none;">
+                <h4>Thank you!</h4>
+                <p id="common-modal-success-sub">Our Relationship Manager will contact you shortly.</p>
+            </div>
+            <form class="enquiry-form" novalidate>
+                <div class="form-group has-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <span class="form-error"></span>
+                </div>
+                <div class="form-group has-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                    <span class="form-error"></span>
+                </div>
+                <div class="form-group has-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <input type="email" name="email" placeholder="Email Address (Optional)">
+                    <span class="form-error"></span>
+                </div>
+                <div class="form-group has-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <select name="bhk" required>
+                        <option value="" disabled selected>Configuration Interested In</option>
+                        <option value="3BHK">3 BHK</option>
+                        <option value="3.5BHK">3.5 BHK</option>
+                        <option value="4.5BHK">4.5 BHK</option>
+                    </select>
+                    <span class="form-error"></span>
+                </div>
+                <button type="submit" class="btn-primary full-width">
+                    <span class="btn-text">Submit Details</span>
+                    <span class="loading-spinner" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floor Plan Modal -->
+    <div id="floor-plan-modal" class="fp-modal">
+        <div class="fp-modal-header">
+            <h3 id="fp-modal-title">Floor Plan</h3>
+            <div class="fp-modal-actions">
+                <button class="fp-action-btn" onclick="zoomInFloorPlan()" title="Zoom In">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </button>
+                <button class="fp-action-btn" onclick="zoomOutFloorPlan()" title="Zoom Out">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </button>
+                <button class="fp-action-btn" onclick="fullscreenFloorPlan()" title="Fullscreen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                </button>
+                <a id="fp-download-btn" class="fp-action-btn" href="#" download title="Download">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+                <button class="fp-action-btn" onclick="closeFloorPlanModal()" title="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+        <div class="fp-modal-body" id="fp-modal-body">
+            <img id="fp-modal-img" src="" alt="Floor Plan" draggable="false">
+        </div>
+    </div>
+
+    <!-- Persistent Mobile Sticky Action Bar -->
+    <div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Mobile Sticky Action Bar">
+        <div class="sticky-bar-wrapper">
+            <a href="tel:18002003676" class="btn-talk-expert">
+                <div class="icon-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="btn-text-col">
+                    <span class="btn-title">Talk to Expert</span>
+                    <span class="btn-subtitle">1800 200 3676</span>
+                </div>
+            </a>
+            <button class="btn-schedule-visit private-viewing-trigger">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6B37A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Schedule Site Visit</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Smooth Scrolling (Lenis) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</body>
+</html>
